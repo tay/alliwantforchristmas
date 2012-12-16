@@ -1,0 +1,26 @@
+%html
+  %head
+    %title All I Want For Christmas
+    %link{:href => "./css/christmas.css", :rel => "stylesheet", :type => "text/css"}
+    %script{:src => "//use.typekit.net/lcd0pja.js", :type => "text/javascript"}
+    :javascript
+      try{Typekit.load();}catch(e){}
+  %body
+    .container-fluid
+      .header
+        %h1 All I Want For Christmas
+        Real wishes from real people on Twitter.
+        %a{href:"https://twitter.com/share", class: "twitter-share-button", data:{url: 'http://alliwantforchristmas.herokuapp.com/',via: 'msfionatay', text:'See what people are wishing for on Twitter this Christmas'}} Tweet
+        :javascript
+          !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+      .container-middle
+        - @tweets.each do |tweet|
+          .row
+            .tweet-text.bubble
+              = tweet.text
+            .tweet-name
+              %a{href: "http://twitter.com/#{tweet.user.username}"}
+                = tweet.user.name
+              %br
+              = tweet.user.location
+

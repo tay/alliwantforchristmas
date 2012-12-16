@@ -1,0 +1,50 @@
+body {
+    background-color: #eee;
+    color: rgba(179, 45, 71, 1);
+    font-family: adelle, serif;
+}
+
+a {
+    color: inherit;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.header {
+    text-align: center;
+}
+
+.container-middle {
+    margin: 0 auto;
+    width: 600px;
+}
+
+.row {
+    display: block;
+    overflow: auto;
+    margin: 20px 0;
+}
+
+.tweet-text {
+    background-color: rgba(179, 45, 71, 0.8);
+    color: white;
+    float: left;
+    font-size: 14px;
+    font-weight: 500;
+    margin-right: 10px;
+    text-shadow: #333 1px 2px 1px;
+    width: 400px;
+}
+
+.tweet-name {
+    float: left;
+    width: 140px;
+}
+
+.bubble {
+    border: 2px solid rgba(179, 45, 71, 1);
+    padding: 20px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
